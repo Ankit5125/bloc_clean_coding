@@ -1,3 +1,4 @@
+import 'package:bloc_clean_coding/components/RoundedButton/RoundedButton.dart';
 import 'package:bloc_clean_coding/config/routes/routs_name.dart';
 import 'package:flutter/material.dart';
 
@@ -19,17 +20,34 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(
-              onPressed: () {
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, RoutsName.HomeScreen);
+            //   },
+            //   child: Text("GOTO HOME"),
+            // ),
+            RoundedButton(
+              onPress: () {
                 Navigator.pushNamed(context, RoutsName.HomeScreen);
               },
-              child: Text("GOTO HOME"),
+              text: "GOTO HOME",
+              height: 60,
+              borderRadius: 10,
             ),
-            TextButton(
-              onPressed: () {
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.pushNamed(context, RoutsName.LoadingScreen);
+            //   },
+            //   child: Text("GOTO Loading"),
+            // ),
+            SizedBox(height: 20),
+            RoundedButton(
+              onPress: () {
                 Navigator.pushNamed(context, RoutsName.LoadingScreen);
               },
-              child: Text("GOTO Loading"),
+              text: "GOTO Loading Screen",
+              height: 60,
+              borderRadius: 10,
             ),
           ],
         ),
