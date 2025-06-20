@@ -13,8 +13,16 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Platform.isAndroid
-        ? Center(child: CircularProgressIndicator(color: Colors.white))
-        : Center(child: CupertinoActivityIndicator(color: Colors.white));
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.lightBlueAccent),
+      body: Center(
+        child:
+            Platform.isAndroid
+                ? Center(child: CircularProgressIndicator(color: Colors.white))
+                : Center(
+                  child: CupertinoActivityIndicator(color: Colors.white),
+                ),
+      ),
+    );
   }
 }
